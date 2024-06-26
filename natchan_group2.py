@@ -57,6 +57,7 @@ def memberThree():
     print("Task 2: Encoded paragraph (shift=1):", encode_paragraph(paragraph, 1))
     print("Task 3: Reversed lines:", reverse_lines(paragraph))
     print("Task 4: Reversed word characters:", reverse_word_characters(paragraph))
+
   
 def memberFour():
     pass
