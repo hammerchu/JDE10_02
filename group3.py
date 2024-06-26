@@ -22,11 +22,31 @@ def memberThree():
     pass
   
 def memberFour():
-    pass
+    import re
+
+    def invert_word(word):
+        # Check if the first character is uppercase
+        is_uppercase = word[0].isupper()
+        # Invert the word
+        inverted_word = word[::-1]
+        # If the original word started with uppercase, turn it into lowercase
+        if is_uppercase:
+            inverted_word = inverted_word[0].lower() + inverted_word[1:]
+        return inverted_word
+
+    def invert_text(text):
+        words = re.split(r'(\W+)', text)
+        inverted_words = [invert_word(word) if word.isalpha() else word for word in words]
+        return ''.join(inverted_words)
+
+    with open('./news.txt', 'r') as f:
+        text = f.read()
+        inverted_text = invert_text(text)
+        print(inverted_text)
 
 
 if __name__ == "__main__":
-    print(hammer())
+    print(hammer_task_0())
     print('call memberOne() ')
     print('call memberTwo() ')
     print('call memberThree() ')
