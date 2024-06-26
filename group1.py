@@ -22,6 +22,12 @@ def memberThree():
     pass
   
 def memberFour():
+    container = []
+
+    for i in f.split():
+        container.append(''.join(reversed(i))) 
+    return container
+
     pass
 
 
