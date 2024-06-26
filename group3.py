@@ -12,8 +12,17 @@ def hammer_task_0():
     result = random.sample(teamJDE, 1)
     return result
   
-def memberOne():
-    pass
+def chris():
+    vowels = ['a', 'e', 'i', 'o', 'u']
+    word_count = 0
+
+    words = f.split()
+    for word in words:
+        if any(vowel in word.lower() for vowel in vowels):
+            word_count += 1
+    
+    return word_count
+
   
 def memberTwo():
     pass
@@ -26,8 +35,8 @@ def memberFour():
 
 
 if __name__ == "__main__":
-    print(hammer())
-    print('call memberOne() ')
+    print(hammer_task_0())
+    print(chris())
     print('call memberTwo() ')
     print('call memberThree() ')
     print('call memberFour() ')
