@@ -8,7 +8,7 @@ print(f.read())
 def hammer_task_0():
     '''example function'''
 
-    teamJDE = ['hammer', 'billy', 'chistina']
+    teamJDE = ['hammer', 'jacky', 'chistina']
     result = random.sample(teamJDE, 1)
     return result
   
