@@ -13,15 +13,33 @@ def hammer_task_0():
     return result
   
 def memberOne():
+    aeiou = {'a', 'e', 'i', 'o', 'u'}
+    count = 0
+    for word in text.split():
+        if any(char.lower() in aeiou for char in word):
+            count += 1
+    return count
     pass
   
 def memberTwo():
+    shifted = ''
+    for char in text:
+        if char.isalpha():
+            if char.isupper():
+                shifted += chr((ord(char) - 65 + shift_value) % 26 + 65)
+            else:
+                shifted += chr((ord(char) - 97 + shift_value) % 26 + 97)
+        else:
+            shifted += char
+    return shifted
     pass
   
 def memberThree():
+    return '\n'.join(line[::-1] for line in text.split('\n'))
     pass
   
 def memberFour():
+    return ' '.join(word[::-1] for word in text.split())
     pass
 
 
